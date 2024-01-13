@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*bg-white, foreground-black .done */
+    --background: 0, 0%, 100%;
+    --foreground: 0 0% 0%;
+
+    /*bg-black, foreground-white .done*/
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    /*bg-lightweight-black, text-gary .done */
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0, 0%, 26%;
+
+    /* border-black,bg-input, input-foreground, rignt .done */
+    --border: 0 0% 0%;
+    --input: 0 0% 92%;
+    --input-foreground: 0 0% 62%;
+    --ring: 0 0% 3.9%;
+
+    /* bg-muted, muted-foreground .done*/
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    /* bg-red, text-white not white done */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* bg-green text-white .done */
+    --success: 156, 93%, 38%;
+    --success-foreground: 0 0% 100%;
+
+    /* card dashbord .done*/
+    --card: 120, 100%, 100%;
+    --card-foreground: 180, 1%, 26%;
+
+    --popover: 0 0% 80%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* bg-black foreground-white done.*/
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    /*bg-white, foreground-black .done*/
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    /*bg-lightweight-black, text-white */
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0, 0%, 100%;
+
+    /* border-lightweight-gray,bg-input, input-foreground, rignt .done */
+    --border: 0 0% 93%;
+    --input: 0 0% 92%;
+    --input-foreground: 0 0% 62%;
+    --ring: 0 0% 100%;
+
+    /* bg-muted, muted-foreground .done*/
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    /* bg-red, text-white not white done*/
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* bg-green text-white .done */
+    --success: 126 67% 48%;
+    --success-foreground: 0 0% 100%;
+
+    /* card dashbord  text-white*/
+    --card: 120, 100%, 100%;
+    --card-foreground: 0 0 100%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: "Urbanist", sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #f9f9f9;
+  }
+}
+
+/* scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide text after some word */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 16ch;
+}
+
+.truncate_text_1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 8ch;
+}
+
+.shadow {
+  box-shadow: 0px 4px 60px 0px rgba(148, 148, 148, 0.05);
+}
+.btn_shadow {
+  box-shadow: 4px 8px 24px 0px rgba(36, 107, 253, 0.25);
+}
+
+input[type="radio"] {
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked::before {
+  background-color: CanvasText;
+}
