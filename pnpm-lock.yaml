@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  "@hookform/resolvers":
+    specifier: ^3.9.0
+    version: 3.9.0(react-hook-form@7.52.1)
   "@radix-ui/react-icons":
     specifier: ^1.3.0
     version: 1.3.0(react@18.2.0)
@@ -38,12 +41,24 @@ dependencies:
   react-icons:
     specifier: ^5.0.1
     version: 5.0.1(react@18.2.0)
+  react-player:
+    specifier: ^2.16.0
+    version: 2.16.0(react@18.2.0)
+  sonner:
+    specifier: ^1.5.0
+    version: 1.5.0(react-dom@18.2.0)(react@18.2.0)
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.1)
+  tailwindcss-rtl:
+    specifier: ^0.9.0
+    version: 0.9.0
+  zod:
+    specifier: ^3.23.8
+    version: 3.23.8
 
 devDependencies:
   "@types/node":
@@ -88,6 +103,9 @@ devDependencies:
   prettier:
     specifier: 3.2.1
     version: 3.2.1
+  prettier-plugin-tailwindcss:
+    specifier: ^0.5.14
+    version: 0.5.14(prettier@3.2.1)
   tailwindcss:
     specifier: ^3.3.0
     version: 3.4.1
@@ -168,6 +186,17 @@ packages:
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
     dev: true
+
+  /@hookform/resolvers@3.9.0(react-hook-form@7.52.1):
+    resolution:
+      {
+        integrity: sha512-bU0Gr4EepJ/EQsH/IwEzYLsT/PEj5C0ynLQ4m+GSHS+xKH4TfSelhluTgOaoc4kA5s7eCsQbM4wvZLzELmWzUg==,
+      }
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.52.1(react@18.2.0)
+    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution:
@@ -1288,6 +1317,14 @@ packages:
         integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==,
       }
     dev: true
+
+  /deepmerge@4.3.1:
+    resolution:
+      {
+        integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==,
+      }
+    engines: { node: ">=0.10.0" }
+    dev: false
 
   /define-data-property@1.1.1:
     resolution:
@@ -2739,6 +2776,13 @@ packages:
         integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==,
       }
 
+  /load-script@1.0.0:
+    resolution:
+      {
+        integrity: sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA==,
+      }
+    dev: false
+
   /locate-path@6.0.0:
     resolution:
       {
@@ -2781,6 +2825,13 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /memoize-one@5.2.1:
+    resolution:
+      {
+        integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==,
+      }
+    dev: false
 
   /merge2@1.4.1:
     resolution:
@@ -3285,6 +3336,64 @@ packages:
     engines: { node: ">= 0.8.0" }
     dev: true
 
+  /prettier-plugin-tailwindcss@0.5.14(prettier@3.2.1):
+    resolution:
+      {
+        integrity: sha512-Puaz+wPUAhFp8Lo9HuciYKM2Y2XExESjeT+9NQoVFXZsPPnc9VYss2SpxdQ6vbatmt8/4+SN0oe0I1cPDABg9Q==,
+      }
+    engines: { node: ">=14.21.3" }
+    peerDependencies:
+      "@ianvs/prettier-plugin-sort-imports": "*"
+      "@prettier/plugin-pug": "*"
+      "@shopify/prettier-plugin-liquid": "*"
+      "@trivago/prettier-plugin-sort-imports": "*"
+      "@zackad/prettier-plugin-twig-melody": "*"
+      prettier: ^3.0
+      prettier-plugin-astro: "*"
+      prettier-plugin-css-order: "*"
+      prettier-plugin-import-sort: "*"
+      prettier-plugin-jsdoc: "*"
+      prettier-plugin-marko: "*"
+      prettier-plugin-organize-attributes: "*"
+      prettier-plugin-organize-imports: "*"
+      prettier-plugin-sort-imports: "*"
+      prettier-plugin-style-order: "*"
+      prettier-plugin-svelte: "*"
+    peerDependenciesMeta:
+      "@ianvs/prettier-plugin-sort-imports":
+        optional: true
+      "@prettier/plugin-pug":
+        optional: true
+      "@shopify/prettier-plugin-liquid":
+        optional: true
+      "@trivago/prettier-plugin-sort-imports":
+        optional: true
+      "@zackad/prettier-plugin-twig-melody":
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-sort-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+    dependencies:
+      prettier: 3.2.1
+    dev: true
+
   /prettier@3.2.1:
     resolution:
       {
@@ -3303,7 +3412,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /proxy-from-env@1.1.0:
     resolution:
@@ -3339,6 +3447,25 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-fast-compare@3.2.2:
+    resolution:
+      {
+        integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==,
+      }
+    dev: false
+
+  /react-hook-form@7.52.1(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-uNKIhaoICJ5KQALYZ4TOaOLElyM+xipord+Ha3crEFhTntdLvWZqVY49Wqd/0GiVCA/f9NjemLeiNPjG7Hpurg==,
+      }
+    engines: { node: ">=12.22.0" }
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-icons@5.0.1(react@18.2.0):
     resolution:
       {
@@ -3355,7 +3482,22 @@ packages:
       {
         integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
       }
-    dev: true
+
+  /react-player@2.16.0(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-mAIPHfioD7yxO0GNYVFD1303QFtI3lyyQZLY229UEAp/a10cSW+hPcakg0Keq8uWJxT2OiT/4Gt+Lc9bD6bJmQ==,
+      }
+    peerDependencies:
+      react: ">=16.6.0"
+    dependencies:
+      deepmerge: 4.3.1
+      load-script: 1.0.0
+      memoize-one: 5.2.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-fast-compare: 3.2.2
+    dev: false
 
   /react@18.2.0:
     resolution:
@@ -3600,6 +3742,19 @@ packages:
     engines: { node: ">=8" }
     dev: true
 
+  /sonner@1.5.0(react-dom@18.2.0)(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-FBjhG/gnnbN6FY0jaNnqZOMmB73R+5IiyYAw8yBj7L54ER7HB3fOSE5OFiQiE2iXWxeXKvg6fIP4LtVppHEdJA==,
+      }
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /source-map-js@1.0.2:
     resolution:
       {
@@ -3793,6 +3948,13 @@ packages:
       tailwindcss: ">=3.0.0 || insiders"
     dependencies:
       tailwindcss: 3.4.1
+    dev: false
+
+  /tailwindcss-rtl@0.9.0:
+    resolution:
+      {
+        integrity: sha512-y7yC8QXjluDBEFMSX33tV6xMYrf0B3sa+tOB5JSQb6/G6laBU313a+Z+qxu55M1Qyn8tDMttjomsA8IsJD+k+w==,
+      }
     dev: false
 
   /tailwindcss@3.4.1:
@@ -4162,3 +4324,10 @@ packages:
       }
     engines: { node: ">=10" }
     dev: true
+
+  /zod@3.23.8:
+    resolution:
+      {
+        integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==,
+      }
+    dev: false

@@ -88,10 +88,3 @@
 ::-webkit-scrollbar {
   display: none;
 }
-
-.truncate_text_1 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 12ch;
-}

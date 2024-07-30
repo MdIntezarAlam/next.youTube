@@ -1,3 +1,36 @@
+//
+
+import { FaReact } from "react-icons/fa6";
+import { IoMusicalNoteSharp } from "react-icons/io5";
+import { SiNextdotjs } from "react-icons/si";
+
+export const categories = [
+  { name: "New", icons: <FaReact /> },
+  {
+    id: 1,
+    name: "Javascript",
+    icons: <FaReact />,
+  },
+  { name: "Coding", icons: <FaReact /> },
+  { name: "ReactJS", icons: <FaReact /> },
+  { name: "NextJS", icons: <SiNextdotjs /> },
+  {
+    name: "Music",
+    icons: <IoMusicalNoteSharp />,
+  },
+  { name: "Education", icons: <FaReact /> },
+  { name: "Podcast", icons: <FaReact /> },
+  { name: "Movie", icons: <FaReact /> },
+  { name: "Gaming", icons: <FaReact /> },
+  { name: "Live", icons: <FaReact /> },
+  { name: "Sport", icons: <FaReact /> },
+  { name: "Fashion", icons: <FaReact /> },
+  { name: "Beauty", icons: <FaReact /> },
+  { name: "Comedy", icons: <FaReact /> },
+  { name: "Gym", icons: <FaReact /> },
+  { name: "Crypto", icons: <FaReact /> },
+];
+
 // scrollable button
 export const btnArr = [
   { id: 0, title: "All" },
@@ -57,7 +90,23 @@ export const videoArr = [
     title3: "43M views . 2 years ago",
   },
   {
-    id: 2,
+    id: 3,
+    img_poster: "/assets/m3.png",
+    userImg: "/assets/m_u1.png",
+    title1: " A paragraph is a series of sentences that are organized",
+    title2: "Lorem ipsum dolor sit amet.",
+    title3: "43M views . 2 years ago",
+  },
+  {
+    id: 3,
+    img_poster: "/assets/m3.png",
+    userImg: "/assets/m_u1.png",
+    title1: " A paragraph is a series of sentences that are organized",
+    title2: "Lorem ipsum dolor sit amet.",
+    title3: "43M views . 2 years ago",
+  },
+  {
+    id: 3,
     img_poster: "/assets/m3.png",
     userImg: "/assets/m_u1.png",
     title1: " A paragraph is a series of sentences that are organized",
@@ -162,7 +211,7 @@ export const infinityArr = [
     title3: "43M views . 2 years ago",
   },
   {
-    id: 2,
+    id: 3,
     img_poster: "/assets/i3.png",
     userImg: "/assets/m_u1.png",
     title1: " A paragraph is a series of sentences that are organized",

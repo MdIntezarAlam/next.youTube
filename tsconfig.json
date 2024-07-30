@@ -13,22 +13,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/public/*": ["./public/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    ".next/types/**/*.ts",
     "next.config.js",
     "postcss.config.js",
-    ".next/types/**/*.ts"
+    "next-sitemap.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next", "out"]
 }
