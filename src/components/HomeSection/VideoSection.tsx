@@ -1,6 +1,6 @@
 import React from "react";
 import VideoCard from "./VideoCard";
-import { Item } from "@/Types/TypesVideos";
+import { type Item } from "@/Types/TypesVideos";
 
 interface VideoSectionProps {
   videos: Item[];

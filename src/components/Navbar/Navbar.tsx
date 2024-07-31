@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { FaCircleUser } from "react-icons/fa6";
 import { IoMdMic } from "react-icons/io";
 import { TiSocialYoutube } from "react-icons/ti";
 

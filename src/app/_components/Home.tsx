@@ -4,7 +4,7 @@ import { useFetchApi } from "@/lib/utils/useFetchApi";
 import { Sidebar } from "@/components/Sidebar/Sidebar";
 import VideoSection from "@/components/HomeSection/VideoSection";
 import SkeletonVideoCard from "@/components/HomeSection/VideoCardSkelaton";
-import { Item } from "@/Types/TypesVideos";
+import { type Item } from "@/Types/TypesVideos";
 
 const HomeComponents = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("New");

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import VideoCard from "@/components/HomeSection/VideoCard";
 import SkeletonVideoCard from "@/components/HomeSection/VideoCardSkelaton";
 import { useFetchApi } from "@/lib/utils/useFetchApi";
-import { Item } from "@/Types/TypesVideos";
+import { type Item } from "@/Types/TypesVideos";
 
 const SearchResult = ({ searchTerm }: { searchTerm: string }) => {
   const [videos, setVideos] = useState<Item[]>([]);

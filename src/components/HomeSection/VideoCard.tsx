@@ -1,5 +1,4 @@
-import { Id, Item, Snippet } from "@/Types/TypesVideos";
-import Image from "next/image";
+import { type Snippet } from "@/Types/TypesVideos";
 import Link from "next/link";
 import React from "react";
 
