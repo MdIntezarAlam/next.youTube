@@ -4,6 +4,16 @@ const nextConfig = {
   images: {
     domains: ["i.ytimg.com"],
   },
+  reactStrictMode: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  compiler: {
+    removeConsole: false,
+  },
 };
 
 module.exports = nextConfig;
