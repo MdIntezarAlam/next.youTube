@@ -26,6 +26,10 @@ export const Sidebar = ({
           <h1 className="text-sm font-normal">{item.name}</h1>
         </button>
       ))}
+      <span className="hidden lg:block text-xs opacity-50">
+        {" "}
+        @Copyright 2024 YouTube
+      </span>
     </div>
   );
 };
