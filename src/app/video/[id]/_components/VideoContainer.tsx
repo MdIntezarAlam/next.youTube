@@ -54,7 +54,7 @@ const VideoContainer = ({ id }: VideoContainerProps) => {
 
   return (
     <div className="flex flex-col lg:flex-row gap-4 w-full bg-primary text-primary-foreground py-5 mt-12">
-      <div className="w-full lg:w-[75%] flex flex-col gap-4 h-[570px] sticky top-0 bg-primary text-primary-foreground pb-4 lg:pb-0">
+      <div className="w-full lg:w-[75%] flex flex-col gap-4 h-[570px] 2xl:h-[750px] sticky top-0 bg-primary text-primary-foreground pb-4 lg:pb-0">
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${id}`}
           controls
@@ -87,7 +87,7 @@ export default VideoContainer;
 const VideoCaontainerSkeleton = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-4 w-full bg-primary text-primary-foreground py-5 mt-12">
-      <div className="w-full lg:w-[75%] flex flex-col gap-4 h-[570px] sticky top-0 bg-primary text-primary-foreground pb-4 lg:pb-0">
+      <div className="w-full lg:w-[75%] flex flex-col gap-4 h-[570px] 2xpx:h-[750px] sticky top-0 bg-primary text-primary-foreground pb-4 lg:pb-0">
         <Skeleton className="w-full h-[90%] flex flex-col gap-4 pb-2 rounded-md bg-card text-primary-foreground cursor-pointer animate-pulse">
           <Skeleton className="h-[90%] w-full bg-gray-300 rounded-t-md"></Skeleton>
           <Skeleton className="py-2 w-full flex gap-2 px-2">

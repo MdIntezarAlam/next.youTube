@@ -24,7 +24,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
           width={100}
           height={100}
           alt={video?.snippet?.title}
-          src={video?.snippet?.thumbnails?.high?.url ?? ""}
+          src={video?.snippet?.thumbnails?.high?.url ?? "/empty.jpg"}
           className="h-full w-full object-cover rounded-t-md"
         />
       </Link>
