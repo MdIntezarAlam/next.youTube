@@ -1,6 +1,6 @@
 import React from "react";
 
-import { appScroll } from "@/lib/utils/constants";
+import { uniqueCategories } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils/tailwind-utils";
 import { type INavScrollbar } from "@/Types/TypesCategory";
 interface IProps {
@@ -15,7 +15,7 @@ export default function HomeNavScrollbar({
   return (
     <nav className="lg:col-span-4 w-full lg:w-[80%] fixed top-12 py-4 bg-primary pl-4 lg:pl-0 pr-4">
       <div className="w-full flex gap-x-3 overflow-auto">
-        {appScroll.map((items: INavScrollbar, i) => (
+        {uniqueCategories.map((items: INavScrollbar, i) => (
           <button
             key={i}
             onClick={() => setSelectedCategory(items?.name)}

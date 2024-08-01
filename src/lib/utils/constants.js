@@ -1,9 +1,8 @@
-//
-import { FaReact } from "react-icons/fa6";
+import { FaReact } from "react-icons/fa";
 import { IoMusicalNoteSharp } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
 
-export const categories = [
+const categories = [
   { name: "New", icons: <FaReact /> },
   { name: "Education", icons: <FaReact /> },
   { name: "Movie", icons: <FaReact /> },
@@ -15,14 +14,9 @@ export const categories = [
   { name: "Sport", icons: <FaReact /> },
   { name: "Coding", icons: <FaReact /> },
   { name: "Music", icons: <FaReact /> },
-  { name: "Comedy", icons: <FaReact /> },
   { name: "NextJS", icons: <SiNextdotjs /> },
   { name: "Bollywood", icons: <FaReact /> },
   { name: "Hollywood", icons: <FaReact /> },
-  {
-    name: "Music",
-    icons: <IoMusicalNoteSharp />,
-  },
   { name: "Tollywood", icons: <FaReact /> },
   { name: "ReactJS", icons: <FaReact /> },
   { name: "Beauty", icons: <FaReact /> },
@@ -31,15 +25,12 @@ export const categories = [
   { name: "Electroni", icons: <FaReact /> },
   { name: "Crypto", icons: <FaReact /> },
   { name: "Mixes", icons: <FaReact /> },
-  { name: "React.Js", icons: <FaReact /> },
   { name: "Mern", icons: <FaReact /> },
   { name: "BPraak", icons: <FaReact /> },
   { name: "Adhan", icons: <FaReact /> },
   { name: "Tranding", icons: <FaReact /> },
-  { name: "Live", icons: <FaReact /> },
   { name: "Song", icons: <FaReact /> },
   { name: "Podcast", icons: <FaReact /> },
-  { name: "Javascript", icons: <FaReact /> },
   { name: "Watched", icons: <FaReact /> },
   { name: "Not", icons: <FaReact /> },
   { name: "Recently", icons: <FaReact /> },
@@ -55,52 +46,16 @@ export const categories = [
   { name: "UI", icons: <FaReact /> },
   { name: "UX", icons: <FaReact /> },
   { name: "Computer", icons: <FaReact /> },
+  { name: "Live", icons: <FaReact /> },
+  { name: "Comedy", icons: <FaReact /> },
+  { name: "Javascript", icons: <FaReact /> },
+  { name: "Music", icons: <IoMusicalNoteSharp /> },
 ];
-export const appScroll = [
-  { name: "New" },
-  { name: "Music" },
-  { name: "Coding" },
-  { name: "Adhan" },
-  { name: "Cooks" },
-  { name: "Live" },
-  { name: "NextJS" },
-  { name: "Comedy" },
-  { name: "Music" },
-  { name: "Education" },
-  { name: "Watched" },
-  { name: "Podcast" },
-  { name: "Recently" },
-  { name: "Movie" },
-  { name: "Study" },
-  { name: "Gaming" },
-  { name: "Studio" },
-  { name: "Live" },
-  { name: "Javascript" },
-  { name: "Tour" },
-  { name: "Sport" },
-  { name: "Fashion" },
-  { name: "iPhone" },
-  { name: "Beauty" },
-  { name: "Comedy" },
-  { name: "Computer" },
-  { name: "Gym" },
-  { name: "Crypto" },
-  { name: "All" },
-  { name: "Mixes" },
-  { name: "React.Js" },
-  { name: "Mern" },
-  { name: "BPraak" },
-  { name: "Bollywood" },
-  { name: "Tranding" },
-  { name: "Song" },
-  { name: "Javascript" },
-  { name: "Electroni" },
-  { name: "Not" },
-  { name: "Case" },
-  { name: "Cook" },
-  { name: "Lofi" },
-  { name: "Saintmartin" },
-  { name: "Tech" },
-  { name: "UI" },
-  { name: "UX" },
-];
+
+// Removing duplicates
+const uniqueCategories = categories.filter(
+  (category, index, self) =>
+    index === self.findIndex((c) => c.name === category.name)
+);
+
+export { uniqueCategories };

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { categories } from "@/lib/utils/constants";
+import { uniqueCategories } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils/tailwind-utils";
 import { type ICategory } from "@/Types/TypesCategory";
 
@@ -14,7 +14,7 @@ export const Sidebar = ({
 }: SidebarProps) => {
   return (
     <div className="flex lg:flex-col gap-3 py-1 p-4">
-      {categories.map((item: ICategory, i) => (
+      {uniqueCategories.map((item: ICategory, i) => (
         <button
           key={i}
           onClick={() => setSelectedCategory(item?.name)}
