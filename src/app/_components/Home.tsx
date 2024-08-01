@@ -44,7 +44,7 @@ const HomeComponents = () => {
         <HomeNavScrollbar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-        />
+      />
 
         <h1 className="text-xl font-medium mt-16 pt-4 px-2">
           <span className="font-thin">Category</span>: {selectedCategory}
@@ -63,7 +63,7 @@ const HomeComponents = () => {
             <div className="mb-5"></div>
           </div>
         ) : (
-          <div className="px-2">
+          <div className="px-4 lg:px-2">
             <VideoSection videos={videos} />
           </div>
         )}

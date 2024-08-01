@@ -1,6 +1,8 @@
-import { type Snippet } from "@/Types/TypesVideos";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
+
+import { type Snippet } from "@/Types/TypesVideos";
 
 interface VideoCardProps {
   video: {

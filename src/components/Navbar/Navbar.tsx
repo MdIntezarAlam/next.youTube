@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoMdMic } from "react-icons/io";
-import { TiSocialYoutube } from "react-icons/ti";
 
 export const Navbar = () => {
   const router = useRouter();
@@ -20,19 +19,19 @@ export const Navbar = () => {
 
   return (
     <nav className="flex items-center  fixed top-0 z-50 bg-primary w-full py-2 text-primary-foreground cursor-pointer">
-      <div className="grid grid-cols-5 gap-1 px-4 w-full">
+      <div className="grid grid-cols-5 gap-1 px-3 lg:px-4 w-full">
         <div
           className="col-span-1 flex items-center gap-1"
           onClick={() => router.push("/")}
         >
-          <TiSocialYoutube className="text-4xl text-[#ff0000]" />
-          <h1 className="text-xs lg:text-xl font-normal">YouTube</h1>
+          <Image alt="icons" src={"/ytb.png"} width={30} height={30} />
+          <h1 className="text-sm lg:text-xl font-normal">YouTube</h1>
         </div>
-        <div className="col-span-4 flex items-center gap-12 pl-4 lg:pl-0 ">
+        <div className="col-span-4 flex items-center gap-12 pl-5 lg:pl-0 ">
           <div className="flex items-center gap-2 lg:gap-4 justify-center flex-1">
             <form
               onSubmit={searchFunction}
-              className="flex-1 flex items-center rounded-full bg-secondary border border-border"
+              className="flex-1 flex items-center rounded-full bg-secondary border border-border h-9"
             >
               <input
                 type="search"
@@ -52,7 +51,6 @@ export const Navbar = () => {
               <IoMdMic className="text-xl" />
             </button>
           </div>{" "}
-          {/* <FaCircleUser className="hidden lg:block text-4xl text-secondary-foreground" /> */}
           <div
             className="hidden lg:block  text-secondary-foreground w-10 h-10"
             onClick={() => router.push("https://intezar-dev.netlify.app/")}
