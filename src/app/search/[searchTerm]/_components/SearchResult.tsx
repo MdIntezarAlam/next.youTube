@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, { useEffect, useState } from "react";
+
 import VideoCard from "@/components/HomeSection/VideoCard";
 import SkeletonVideoCard from "@/components/HomeSection/VideoCardSkelaton";
 import { useFetchApi } from "@/lib/utils/useFetchApi";
@@ -14,11 +17,11 @@ const SearchResult = ({ searchTerm }: { searchTerm: string }) => {
     setLoading(true);
     useFetchApi(`search?part=snippet&q=${searchTerm}`).then((data) => {
       if (data.error) {
-        setError(data.error);
+        setError(data?.error);
         setVideos([]);
       } else {
         setError(null);
-        setVideos(data.items);
+        setVideos(data?.items);
       }
       setLoading(false);
     });

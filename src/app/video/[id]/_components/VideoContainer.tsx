@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, { useEffect, useState } from "react";
-import VideoCard from "@/components/HomeSection/VideoCard";
-import { useFetchApi } from "@/lib/utils/useFetchApi";
-import { type Item } from "@/Types/TypesVideos";
 import ReactPlayer from "react-player";
+
+import VideoCard from "@/components/HomeSection/VideoCard";
 import SkeletonVideoCard from "@/components/HomeSection/VideoCardSkelaton";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useFetchApi } from "@/lib/utils/useFetchApi";
+import { type Item } from "@/Types/TypesVideos";
 
 interface VideoContainerProps {
   id: string;
@@ -21,11 +24,11 @@ const VideoContainer = ({ id }: VideoContainerProps) => {
     setLoading(true);
     useFetchApi(`videos?part=snippet,statistics&id=${id}`).then((data) => {
       if (data.error) {
-        setError(data.error);
+        setError(data?.error);
         setVideoDetails(null);
       } else {
         setError(null);
-        setVideoDetails(data.items[0]);
+        setVideoDetails(data?.items[0]);
       }
       setLoading(false);
     });
@@ -54,7 +57,7 @@ const VideoContainer = ({ id }: VideoContainerProps) => {
 
   return (
     <div className="flex flex-col lg:flex-row gap-4 w-full bg-primary text-primary-foreground py-5 mt-12">
-      <div className="w-full lg:w-[75%] flex flex-col gap-4 h-[570px] 2xl:h-[750px] sticky top-0 bg-primary text-primary-foreground pb-4 lg:pb-0">
+      <div className="w-full lg:w-[75%] flex flex-col gap-4 h-[350px] md:h-[400px] lg:h-[570px] 2xl:h-[750px] sticky top-0 bg-primary text-primary-foreground pb-4 lg:pb-0">
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${id}`}
           controls

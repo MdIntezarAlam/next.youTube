@@ -41,12 +41,10 @@ const HomeComponents = () => {
       </div>
 
       <div className="col-span-5 lg:col-span-4 bg-secondary h-screen lg:h-full overflow-auto  flex flex-col gap-5">
-        <nav className="lg:col-span-4 w-full lg:w-[80%] fixed top-12 py-4 bg-primary pl-4 lg:pl-0 pr-4">
-          <HomeNavScrollbar
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-          />
-        </nav>
+        <HomeNavScrollbar
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
 
         <h1 className="text-xl font-medium mt-16 pt-4 px-2">
           <span className="font-thin">Category</span>: {selectedCategory}
