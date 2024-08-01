@@ -44,7 +44,7 @@ const HomeComponents = () => {
         <HomeNavScrollbar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-      />
+        />
 
         <h1 className="text-xl font-medium mt-16 pt-4 px-2">
           <span className="font-thin">Category</span>: {selectedCategory}
