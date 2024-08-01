@@ -1,13 +1,15 @@
 import React from "react";
-import VideoCard from "./VideoCard";
+
 import { type Item } from "@/Types/TypesVideos";
+
+import VideoCard from "./VideoCard";
 
 interface VideoSectionProps {
   videos: Item[];
 }
 const VideoSection = ({ videos }: VideoSectionProps) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 ">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-3  gap-y-8">
       {videos?.map((item, i) => (
         <div key={i}>{item?.id?.videoId && <VideoCard video={item} />}</div>
       ))}

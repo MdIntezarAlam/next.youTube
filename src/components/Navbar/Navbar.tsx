@@ -19,7 +19,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center  fixed top-0 z-50 bg-secondary w-full py-2 text-primary-foreground cursor-pointer">
+    <nav className="flex items-center  fixed top-0 z-50 bg-primary w-full py-2 text-primary-foreground cursor-pointer">
       <div className="grid grid-cols-5 gap-1 px-4 w-full">
         <div
           className="col-span-1 flex items-center gap-1"

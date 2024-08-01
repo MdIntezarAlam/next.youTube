@@ -1,10 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import React, { useEffect, useState } from "react";
-import { useFetchApi } from "@/lib/utils/useFetchApi";
-import { Sidebar } from "@/components/Sidebar/Sidebar";
-import VideoSection from "@/components/HomeSection/VideoSection";
+
 import SkeletonVideoCard from "@/components/HomeSection/VideoCardSkelaton";
+import VideoSection from "@/components/HomeSection/VideoSection";
+import { Sidebar } from "@/components/Sidebar/Sidebar";
+import { useFetchApi } from "@/lib/utils/useFetchApi";
 import { type Item } from "@/Types/TypesVideos";
+
+import HomeNavScrollbar from "./HomeNavScrollbar";
 
 const HomeComponents = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("New");
@@ -16,11 +21,11 @@ const HomeComponents = () => {
     setLoading(true);
     useFetchApi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       if (data.error) {
-        setError(data.error);
+        setError(data?.error);
         setVideos([]);
       } else {
         setError(null);
-        setVideos(data.items);
+        setVideos(data?.items);
       }
       setLoading(false);
     });
@@ -28,15 +33,22 @@ const HomeComponents = () => {
 
   return (
     <div className="grid lg:grid-cols-5 gap-1 bg-transparent h-full overflow-hidden mt-12 pt-2">
-      <div className="lg:block lg:top-0 col-span-5 lg:col-span-1 bg-secondary h-[40px] lg:h-full overflow-auto flex items-center">
+      <div className="hidden lg:block col-span-1 bg-primary h-full overflow-auto">
         <Sidebar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
       </div>
 
-      <div className="col-span-5 lg:col-span-4 bg-secondary h-screen lg:h-full overflow-auto p-4 flex flex-col gap-8">
-        <h1 className="text-xl font-medium">
+      <div className="col-span-5 lg:col-span-4 bg-secondary h-screen lg:h-full overflow-auto  flex flex-col gap-5">
+        <nav className="lg:col-span-4 w-full lg:w-[80%] fixed top-12 py-4 bg-primary pl-4 lg:pl-0 pr-4">
+          <HomeNavScrollbar
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </nav>
+
+        <h1 className="text-xl font-medium mt-16 pt-4 px-2">
           <span className="font-thin">Category</span>: {selectedCategory}
         </h1>
         {error ? (
@@ -53,7 +65,9 @@ const HomeComponents = () => {
             <div className="mb-5"></div>
           </div>
         ) : (
-          <VideoSection videos={videos} />
+          <div className="px-2">
+            <VideoSection videos={videos} />
+          </div>
         )}
       </div>
     </div>
