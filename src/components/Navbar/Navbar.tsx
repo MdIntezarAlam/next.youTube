@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
@@ -55,13 +56,15 @@ export const Navbar = () => {
             className="hidden lg:block  text-secondary-foreground w-10 h-10"
             onClick={() => router.push("https://intezar-dev.netlify.app/")}
           >
-            <Image
-              src="/user.png"
-              width={100}
-              height={100}
-              alt="user"
-              className="rounded-full w-full h-full object-cover"
-            />
+            <Link href={"/auth/login"}>
+              <Image
+                src="/user.png"
+                width={100}
+                height={100}
+                alt="user"
+                className="rounded-full w-full h-full object-cover"
+              />
+            </Link>
           </div>
         </div>
       </div>
