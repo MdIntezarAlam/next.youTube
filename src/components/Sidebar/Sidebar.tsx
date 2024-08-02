@@ -48,7 +48,7 @@ export const Sidebar = ({
       ))}
       <h2 className="bg-secondary h-0.5 w-full my-2" />
       <h1 className="text-lg font-medium">Explore</h1>
-      {uniqueCategories?.slice(10,15).map((item: ICategory, i) => (
+      {uniqueCategories?.slice(10, 15).map((item: ICategory, i) => (
         <button
           key={i}
           onClick={() => setSelectedCategory(item?.name)}

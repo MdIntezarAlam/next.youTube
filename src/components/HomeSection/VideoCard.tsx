@@ -13,7 +13,7 @@ interface VideoCardProps {
 export const demoVideoUrl = "/video/GDa8kZLNhJ4";
 
 const VideoCard = ({ video }: VideoCardProps) => {
-  console.log("video", video);
+  // console.log("video", video);
   return (
     <div className="w-full h-[295px] flex flex-col gap-4 pb-2 rounded-md bg-card text-primary-foreground cursor-pointer">
       <Link

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import SkeletonVideoCard from "@/components/HomeSection/VideoCardSkelaton";
@@ -17,6 +18,15 @@ const HomeComponents = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  const fetchDataFromBackend = async () => {
+    try {
+      const responce = await axios.get("/api/youtube/auth");
+      console.log("responce", responce);
+    } catch (error) {}
+  };
+  useEffect(() => {
+    void fetchDataFromBackend();
+  }, []);
   useEffect(() => {
     setLoading(true);
     useFetchApi(`search?part=snippet&q=${selectedCategory}`).then((data) => {
