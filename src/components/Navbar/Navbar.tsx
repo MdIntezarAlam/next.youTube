@@ -52,10 +52,7 @@ export const Navbar = () => {
               <IoMdMic className="text-xl" />
             </button>
           </div>{" "}
-          <div
-            className="hidden lg:block  text-secondary-foreground w-10 h-10"
-            onClick={() => router.push("https://intezar-dev.netlify.app/")}
-          >
+          <div className="hidden lg:block  text-secondary-foreground w-10 h-10">
             <Link href={"/auth/login"}>
               <Image
                 src="/user.png"
