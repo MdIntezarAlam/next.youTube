@@ -57,7 +57,7 @@ const HomeComponents = () => {
         />
 
         <h1 className="text-xl font-medium mt-16 pt-4 px-2">
-          <span className="font-thin">Category</span>: {selectedCategory}
+          <span className="font-thin">Category</span>: {selectedCategory}.
         </h1>
         {error ? (
           <div className="text-destructive flex items-center justify-center m-auto lg:text-4xl text-center px-5">
