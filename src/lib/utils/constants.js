@@ -52,7 +52,6 @@ const categories = [
   { name: "Music", icons: <IoMusicalNoteSharp /> },
 ];
 
-// Removing duplicates
 const uniqueCategories = categories.filter(
   (category, index, self) =>
     index === self.findIndex((c) => c.name === category.name)
