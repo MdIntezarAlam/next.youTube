@@ -13,7 +13,7 @@ import { type Item } from "@/Types/TypesVideos";
 import HomeNavScrollbar from "./HomeNavScrollbar";
 
 const HomeComponents = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("New");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Music");
   const [videos, setVideos] = useState<Item[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -22,8 +22,11 @@ const HomeComponents = () => {
     try {
       const responce = await axios.get("/api/youtube/auth");
       console.log("responce", responce);
-    } catch (error) {}
+    } catch (error) {
+      console.log("errr ");
+    }
   };
+
   useEffect(() => {
     void fetchDataFromBackend();
   }, []);

@@ -55,7 +55,7 @@ export const Navbar = () => {
           <div className="hidden lg:block  text-secondary-foreground w-10 h-10">
             <Link href={"/auth/login"}>
               <Image
-                src="/user.png"
+                src="/user.jpg"
                 width={100}
                 height={100}
                 alt="user"
