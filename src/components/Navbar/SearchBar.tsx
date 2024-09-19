@@ -39,7 +39,6 @@ export function SearchBar() {
   }
 
   return (
-    <>
       <Sheet open={show} onOpenChange={setShow}>
         <SheetTrigger asChild>
           <IoSearchOutline className="font-normal text-4xl text-gray-200" />
@@ -95,6 +94,5 @@ export function SearchBar() {
           </div>
         </SheetContent>
       </Sheet>
-    </>
   );
 }

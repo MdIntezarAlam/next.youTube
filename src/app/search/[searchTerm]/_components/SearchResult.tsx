@@ -36,7 +36,7 @@ const SearchResult = ({ searchTerm }: { searchTerm: string }) => {
   }, [searchTerm]);
 
   return (
-    <div className="mt-14 py-2 bg-primary text-primary-foreground min-h-screen p-4">
+    <div className="mt-14 py-2 bg-primary text-primary-foreground min-h-screen p-4 overflow-hidden">
       <h1 className="lg:text-3xl font-bold py-5">
         Search Results For:{" "}
         <span className="text-destructive capitalize w-fit bg-green-400 text-white rounded-full px-2 text-xl py-1">

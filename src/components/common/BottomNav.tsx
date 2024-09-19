@@ -40,7 +40,7 @@ const BottomNav = () => {
     },
 
     {
-      path: "/profile",
+      path: "",
       title: "Profile",
       Icons: (
         <FaUser
