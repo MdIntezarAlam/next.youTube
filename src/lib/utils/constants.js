@@ -3,6 +3,7 @@ import { IoMusicalNoteSharp } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
 
 const categories = [
+  { name: "Music", icons: <FaReact /> },
   { name: "New", icons: <FaReact /> },
   { name: "Education", icons: <FaReact /> },
   { name: "Movie", icons: <FaReact /> },
@@ -13,7 +14,6 @@ const categories = [
   { name: "Comedy", icons: <FaReact /> },
   { name: "Sport", icons: <FaReact /> },
   { name: "Coding", icons: <FaReact /> },
-  { name: "Music", icons: <FaReact /> },
   { name: "NextJS", icons: <SiNextdotjs /> },
   { name: "Bollywood", icons: <FaReact /> },
   { name: "Hollywood", icons: <FaReact /> },
@@ -52,7 +52,6 @@ const categories = [
   { name: "Music", icons: <IoMusicalNoteSharp /> },
 ];
 
-// Removing duplicates
 const uniqueCategories = categories.filter(
   (category, index, self) =>
     index === self.findIndex((c) => c.name === category.name)

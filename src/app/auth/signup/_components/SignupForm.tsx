@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { type SubmitHandler, useForm } from "react-hook-form";
 
 import { Input } from "@/components/ui/input";
+import axios from "axios";
 
 interface ISignupForm {
   name: string;
@@ -26,6 +27,22 @@ const SignupForm = () => {
     console.log(data);
   };
 
+  const testingApi = async () => {
+    try {
+      const res = await axios.get(
+        // "https://int-next-youtube.netlify.app/.netlify/functions/api/test"
+        "https://next-youtube-backend.netlify.app/.netlify/functions/api/users"
+      );
+
+      console.log("res: ", res);
+    } catch (error) {
+      console.log("error: ", error);
+    }
+  };
+
+  useEffect(() => {
+    void testingApi();
+  }, []);
   return (
     <div className="bg-primary text-primary-foreground w-full h-screen m-auto flex flex-col gap-4 p-4">
       <div className="m-auto w-full lg:w-1/2 flex flex-col gap-10 border p-10 rounded-md bg-card">
@@ -52,7 +69,10 @@ const SignupForm = () => {
             <span>Already have an account?</span>
             <a href="/auth/login">Login</a>{" "}
           </div>
-          <button className="w-full bg-secondary h-12 rounded-md text-lg font-medium">
+          <button
+            type="button"
+            className="w-full bg-secondary h-12 rounded-md text-lg font-medium"
+          >
             Signup
           </button>
         </form>
