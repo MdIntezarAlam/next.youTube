@@ -4,7 +4,7 @@ import { toast } from "sonner";
 const BASE_URL = "https://youtube-v31.p.rapidapi.com";
 const options = {
   params: {
-    maxResults: "50",
+    maxResults: "80",
   },
   headers: {
     "X-RapidAPI-Key": "67ecb319dbmsheef2301d2198794p18f9dcjsnec3eafe9c268",

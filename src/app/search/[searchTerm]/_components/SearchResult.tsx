@@ -13,25 +13,35 @@ const SearchResult = ({ searchTerm }: { searchTerm: string }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  const truncateSearchTerm = (term: string) => {
+    const decodedTerm = decodeURIComponent(term).replace(/-/g, " ");
+    return decodedTerm.length > 12
+      ? `${decodedTerm.slice(0, 15)}...`
+      : decodedTerm;
+  };
   useEffect(() => {
     setLoading(true);
-    useFetchApi(`search?part=snippet&q=${searchTerm}`).then((data) => {
-      if (data.error) {
-        setError(data?.error);
-        setVideos([]);
-      } else {
-        setError(null);
-        setVideos(data?.items);
+    useFetchApi(`search?part=snippet&q=${decodeURIComponent(searchTerm)}`).then(
+      (data) => {
+        if (data.error) {
+          setError(data?.error);
+          setVideos([]);
+        } else {
+          setError(null);
+          setVideos(data?.items);
+        }
+        setLoading(false);
       }
-      setLoading(false);
-    });
+    );
   }, [searchTerm]);
 
   return (
     <div className="mt-14 py-2 bg-primary text-primary-foreground min-h-screen p-4">
       <h1 className="lg:text-3xl font-bold py-5">
         Search Results For:{" "}
-        <span className="text-destructive capitalize">{searchTerm}</span> Videos
+        <span className="text-destructive capitalize w-fit bg-green-400 text-white rounded-full px-2 text-xl py-1">
+          {truncateSearchTerm(searchTerm)}
+        </span>
       </h1>
       {error ? (
         <div className="text-destructive flex items-center justify-center m-auto lg:text-4xl text-center px-5">

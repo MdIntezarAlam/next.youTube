@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 
 import Navbar from "@/components/Navbar/Navbar";
+import BottomNav from "@/components/common/BottomNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,8 @@ export default function RootLayout({
         <Toaster />
         <Navbar />
         {children}
+        <div className="mb-20 lg:mb-0" />
+        <BottomNav />
       </body>
     </html>
   );
