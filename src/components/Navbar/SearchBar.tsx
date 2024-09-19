@@ -41,7 +41,7 @@ export function SearchBar() {
   return (
       <Sheet open={show} onOpenChange={setShow}>
         <SheetTrigger asChild>
-          <IoSearchOutline className="font-normal text-4xl text-gray-200" />
+          <IoSearchOutline className="font-normal text-3xl text-gray-200" />
         </SheetTrigger>
         <SheetContent
           side="top"
