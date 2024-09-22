@@ -46,7 +46,7 @@ function SheetCategories({ open, setOpen }: { open: boolean; setOpen: any }) {
     { title: "Trending", start: 15, end: 20 },
     { title: "Most Watched", start: 20, end: 25 },
     { title: "World Wide", start: 25, end: 30 },
-    { title: "More From YouTube", start: 30, end: 35 },
+    { title: "More", start: 30, end: 35 },
   ];
 
   return (
@@ -86,7 +86,7 @@ function CategorySection({
 }) {
   return (
     <section className="flex flex-col ">
-      <h1 className="text-2xl font-bold border-b pb-2 border-white/50 my-4">
+      <h1 className="text-xl font-semibold border-b pb-2 border-white/50 my-4">
         {title}
       </h1>
       <section className="flex flex-col gap-2">
