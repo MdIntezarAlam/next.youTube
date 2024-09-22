@@ -27,7 +27,7 @@ export default function RootLayout({
         <ClientWrapper>
           <Navbar />
           {children}
-          <div className="mb-20 lg:mb-0" />
+          <div className="mb-10 lg:mb-0" />
           <BottomNav />
         </ClientWrapper>
       </body>
