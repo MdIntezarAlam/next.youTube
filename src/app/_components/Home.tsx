@@ -26,7 +26,7 @@ const HomeComponents = () => {
         <Sidebar />
       </div>
 
-      <div className="col-span-5 lg:col-span-4 bg-secondary h-screen lg:h-full overflow-auto flex flex-col gap-5">
+      <div className="col-span-5 lg:col-span-4 bg-secondary h-screen lg:h-full overflow-auto  flex flex-col gap-5">
         <HomeNavScrollbar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
@@ -37,7 +37,9 @@ const HomeComponents = () => {
         </h1>
 
         {isError ? (
-          <div className="text-white text-4xl">Data Not Found</div>
+          <div className="text-destructive flex items-center justify-center m-auto lg:text-4xl text-center px-5">
+            Data Not Found
+          </div>
         ) : isLoading ? (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
             {Array.from({ length: 9 }).map((_, i) => (
@@ -48,13 +50,17 @@ const HomeComponents = () => {
             <div className="mb-5"></div>
           </div>
         ) : (
-          <div className="px-4 lg:px-2 text-center h-full flex items-center justify-center">
+          <>
             {!data?.items ? (
-              <div className="text-white text-4xl">Data Not Found</div>
+              <div className="text-destructive flex items-center justify-center m-auto lg:text-4xl text-center px-5">
+                Data Not Found
+              </div>
             ) : (
-              <VideoSection videos={data?.items || []} />
+              <div className="px-4 lg:px-2">
+                <VideoSection videos={data?.items} />
+              </div>
             )}
-          </div>
+          </>
         )}
       </div>
     </div>

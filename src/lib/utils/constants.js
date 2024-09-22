@@ -3,6 +3,7 @@ import { IoMusicalNoteSharp } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
 
 const categories = [
+  { name: "Comedy", icons: <FaReact /> },
   { name: "Music", icons: <FaReact /> },
   { name: "New", icons: <FaReact /> },
   { name: "Education", icons: <FaReact /> },
@@ -11,7 +12,6 @@ const categories = [
   { name: "Fashion", icons: <FaReact /> },
   { name: "Live", icons: <FaReact /> },
   { name: "All", icons: <FaReact /> },
-  { name: "Comedy", icons: <FaReact /> },
   { name: "Sport", icons: <FaReact /> },
   { name: "Coding", icons: <FaReact /> },
   { name: "NextJS", icons: <SiNextdotjs /> },

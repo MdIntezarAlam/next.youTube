@@ -5,6 +5,6 @@ interface ICategory {
 }
 
 export const useCategory = create<ICategory>((set) => ({
-  selectedCategory: "Music",
+  selectedCategory: "Comedy",
   setSelectedCategory: (selectedCategory) => set({ selectedCategory }),
 }));
