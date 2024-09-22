@@ -39,60 +39,60 @@ export function SearchBar() {
   }
 
   return (
-      <Sheet open={show} onOpenChange={setShow}>
-        <SheetTrigger asChild>
-          <IoSearchOutline className="font-normal text-3xl text-gray-200" />
-        </SheetTrigger>
-        <SheetContent
-          side="top"
-          className="w-full bg-secondary  h-full pt-8 lg:px-0"
-        >
-          <div className=" mx-auto  p-5 h-full">
-            <form
-              onSubmit={handleSubmit}
-              className="relative h-10 flex items-center gap-x-2 w-full text-ellipsis"
+    <Sheet open={show} onOpenChange={setShow}>
+      <SheetTrigger asChild>
+        <IoSearchOutline className="font-normal text-3xl text-gray-400" />
+      </SheetTrigger>
+      <SheetContent
+        side="top"
+        className="w-full bg-secondary  h-full pt-8 lg:px-0"
+      >
+        <div className=" mx-auto  p-5 h-full">
+          <form
+            onSubmit={handleSubmit}
+            className="relative h-10 flex items-center gap-x-2 w-full text-ellipsis"
+          >
+            <FaArrowLeft
+              className="cursor-pointer text-primary-foreground"
+              onClick={() => setShow(false)}
+            />
+            <Input
+              placeholder="Search Anything..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="h-full rounded-full w-full outline-none text-base pr-8 text-primary-foreground placeholder:text-ellipsis"
+            />
+            <button
+              type="submit"
+              className="absolute end-3 top-1/2 -translate-y-1/2 text-primary-pftext-primary-foreground"
             >
-              <FaArrowLeft
-                className="cursor-pointer text-primary-foreground"
-                onClick={() => setShow(false)}
-              />
-              <Input
-                placeholder="Search Anything..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="h-full rounded-full w-full outline-none text-base pr-8 text-primary-foreground placeholder:text-ellipsis"
-              />
-              <button
-                type="submit"
-                className="absolute end-3 top-1/2 -translate-y-1/2 text-primary-pftext-primary-foreground"
-              >
-                <FaSearch className="text-primary-foreground" />
-              </button>
-            </form>
-            <div className="mt-5">
-              {searchHistory.length > 0 && (
-                <div className="flex flex-col gap-2 text-primary-foreground">
-                  <h2 className="text-lg">Search History</h2>
-                  {searchHistory.map((term, index) => (
-                    <div
-                      key={index}
-                      className="cursor-pointer hover:underline"
-                      onClick={() => {
-                        setSearchTerm(term);
-                        setShow(false);
-                        router.push(
-                          `/search?search=${term}&limit=40&page=1&category=ALL`
-                        );
-                      }}
-                    >
-                      {term}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+              <FaSearch className="text-primary-foreground" />
+            </button>
+          </form>
+          <div className="mt-5">
+            {searchHistory.length > 0 && (
+              <div className="flex flex-col gap-2 text-primary-foreground">
+                <h2 className="text-lg">Search History</h2>
+                {searchHistory.map((term, index) => (
+                  <div
+                    key={index}
+                    className="cursor-pointer hover:underline"
+                    onClick={() => {
+                      setSearchTerm(term);
+                      setShow(false);
+                      router.push(
+                        `/search?search=${term}&limit=40&page=1&category=ALL`
+                      );
+                    }}
+                  >
+                    {term}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        </SheetContent>
-      </Sheet>
+        </div>
+      </SheetContent>
+    </Sheet>
   );
 }

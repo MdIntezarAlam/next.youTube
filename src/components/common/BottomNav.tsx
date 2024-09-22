@@ -1,5 +1,4 @@
 "use client";
-
 import { usePathname, useRouter } from "next/navigation";
 import { FaUser } from "react-icons/fa6";
 import { TiHome } from "react-icons/ti";
@@ -40,7 +39,7 @@ const BottomNav = () => {
     },
 
     {
-      path: "",
+      path: "/auth/login",
       title: "Profile",
       Icons: (
         <FaUser
@@ -64,7 +63,6 @@ const BottomNav = () => {
             {item.title === "Profile" ? (
               <Link
                 href={item.path}
-                prefetch={false}
                 className="flex w-full flex-col items-center justify-center space-y-1 whitespace-pre text-sm"
               >
                 <img

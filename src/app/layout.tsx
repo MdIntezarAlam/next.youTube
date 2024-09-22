@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 
 import Navbar from "@/components/Navbar/Navbar";
 import BottomNav from "@/components/common/BottomNav";
+import { ClientWrapper } from "@/components/ClientWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Toaster />
-        <Navbar />
-        {children}
-        <div className="mb-20 lg:mb-0" />
-        <BottomNav />
+        <ClientWrapper>
+          <Navbar />
+          {children}
+          <div className="mb-20 lg:mb-0" />
+          <BottomNav />
+        </ClientWrapper>
       </body>
     </html>
   );

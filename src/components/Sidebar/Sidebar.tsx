@@ -3,15 +3,15 @@ import React from "react";
 import { uniqueCategories } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils/tailwind-utils";
 import { type ICategory } from "@/Types/TypesCategory";
+import { useCategory } from "@/lib/slices/useCategory";
 
 interface SidebarProps {
   selectedCategory: string;
   setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
 }
-export const Sidebar = ({
-  selectedCategory,
-  setSelectedCategory,
-}: SidebarProps) => {
+export const Sidebar = () => {
+  const { selectedCategory, setSelectedCategory } = useCategory();
+
   return (
     <div className="flex lg:flex-col gap-3 py-1 p-4">
       <h2 className="bg-secondary h-0.5 w-full my-2" />

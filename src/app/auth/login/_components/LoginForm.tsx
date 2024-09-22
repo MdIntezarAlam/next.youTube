@@ -27,10 +27,11 @@ const LoginForm = () => {
   return (
     <div className="bg-primary text-primary-foreground w-full h-screen m-auto flex flex-col gap-4 p-4">
       <div className="m-auto w-full lg:w-1/2 flex flex-col gap-10 border p-10 rounded-md bg-card">
-        <div className="flex flex-col items-center gap-4">
-          <h1 className="text-4xl font-medium">Login</h1>
-          <h1 className=" text-2xl font-medium">
-            Welcome back to your account !
+        <div className="flex flex-col items-center gap-4 font-medium">
+          <h1 className="text-4xl">Login</h1>
+          <h1 className="text-2xl text-center">
+            Welcome back to your account ! <br />
+            <span className="text-destructive text-xl">(Currently Login Api is in under development)</span>
           </h1>
         </div>
         <form
