@@ -63,8 +63,7 @@ const BottomNav = () => {
           >
             {item.title === "Profile" ? (
               <Link
-                href={"https:intezar-dev.netlify.app"}
-                target="_blank"
+                href={item.path}
                 prefetch={false}
                 className="flex w-full flex-col items-center justify-center space-y-1 whitespace-pre text-sm"
               >
