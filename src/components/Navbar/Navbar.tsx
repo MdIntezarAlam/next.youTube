@@ -28,7 +28,7 @@ export const Navbar = () => {
           onClick={() => router.push("/")}
         >
           <Image alt="icons" src={"/ytb.png"} width={30} height={30} />
-          <h1 className="text-xl font-normal">YouTube</h1>
+          <h1 className="text-xl font-bold">YouTube</h1>
         </div>
         <div className="col-span-4 flex items-center gap-12 pl-0 ">
           <div className="flex items-center gap-4 justify-center flex-1">
@@ -65,14 +65,14 @@ export const Navbar = () => {
       </div>
       {/* Mobile devices */}
       <div className="lg:hidden flex items-center justify-between px-3 w-full">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4">
           <NavSidebarSheet />
           <div
             className="flex items-center gap-1"
             onClick={() => router.push("/")}
           >
             <Image alt="icons" src={"/ytb.png"} width={30} height={30} />
-            <h1 className="text-xl font-normal">YouTube</h1>
+            <h1 className="text-xl font-bold">YouTube</h1>
           </div>
         </div>
         <SearchBar />
