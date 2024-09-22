@@ -31,7 +31,9 @@ const LoginForm = () => {
           <h1 className="text-4xl">Login</h1>
           <h1 className="text-2xl text-center">
             Welcome back to your account ! <br />
-            <span className="text-destructive text-xl">(Currently Login Api is in under development)</span>
+            <span className="text-destructive text-xl">
+              (Currently Login Api is in under development)
+            </span>
           </h1>
         </div>
         <form

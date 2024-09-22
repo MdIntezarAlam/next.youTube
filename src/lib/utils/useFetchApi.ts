@@ -19,7 +19,8 @@ export const useFetchApi = async (url: string) => {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 429) {
         return {
-          error: "You have Crossed the Request Limit. Please try again after 24 hours",
+          error:
+            "You have Crossed the Request Limit. Please try again after 24 hours",
         };
       } else {
         return { error: error.message };
